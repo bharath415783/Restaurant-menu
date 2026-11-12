@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-cafe-cream: #FAF7F2;
+  --color-cafe-card: #FFFFFF;
+  --color-cafe-border: #EAE3D9;
+  --color-cafe-dark: #1E1B18;
+  --color-cafe-muted: #736B63;
+  --color-cafe-terracotta: #8C4A2F;
+  --color-cafe-terracotta-hover: #A85A3B;
+  --color-cafe-gold: #C28E5C;
+}
+
+:root {
+  font-family: var(--font-sans);
+  background-color: var(--color-cafe-cream);
+  color: var(--color-cafe-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, .font-serif {
+  font-family: var(--font-serif);
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D8CEC2;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #BDB0A2;
+}
+
+/* Hide scrollbar for category horizontal carousel */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Card hover shadow and aesthetic border transitions */
+.menu-card-shadow {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.menu-card-shadow:hover {
+  box-shadow: 0 12px 28px -4px rgba(140, 74, 47, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.03);
+  transform: translateY(-2px);
+  border-color: #D6C7B7;
+}
+
+/* Receipt dotted tear effect */
+.receipt-tear {
+  background-image: radial-gradient(circle at 10px 0, transparent 0, transparent 6px, #FAF7F2 7px);
+  background-size: 20px 20px;
+  background-repeat: repeat-x;
+}
